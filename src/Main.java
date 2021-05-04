@@ -3,7 +3,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         StudentManagement studentManagement = new StudentManagement();
@@ -15,7 +14,7 @@ public class Main {
             System.out.println("=======> Menu quản lý <========");
             System.out.println("1. Thêm mới sinh viên: \n" +
                     "2. Hiển thị danh sách sinh viên: \n" +
-                    "Nhập vào số khác để thoát chương trình");
+                    "Nhập vào số khác để thoát chương trình \n");
             a = scanner.nextInt();
             switch (a) {
                 case 1:
@@ -31,10 +30,7 @@ public class Main {
                 case 2:
                     System.out.println("Danh sách toàn bộ sinh viên");
                     System.out.println("size"+studentList.size());
-                    for (int i=0; i<studentList.size();i++){
-                        System.out.println("i = "+i);
-                        System.out.println(studentList.get(i));
-                    }
+                   studentManagement.listStudent(studentList);
                     break;
                 default:
                     System.out.println("GoodBye");

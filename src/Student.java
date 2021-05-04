@@ -35,4 +35,13 @@ public class Student {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "MaSV=" + MaSV +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }
